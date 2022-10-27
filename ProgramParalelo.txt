@@ -1,0 +1,35 @@
+﻿
+// conta corrente
+
+using BackEndProj.Classes;
+
+// Conta conta1 = new Conta("123", "97765-2", 12200);
+
+// Conta conta2 = new Conta();
+//     conta2.preencherAgencia("555");
+//     conta2.conta = "8003-2";
+//     conta2.setSaldo(5000);
+
+// Console.WriteLine("Conta 1");
+// Console.WriteLine($"Agência: {conta1.agencia}");
+// Console.WriteLine($"Conta: {conta1.conta}");
+// Console.WriteLine($"Saldo: {conta1.getSaldo()}");
+
+// Console.WriteLine();
+// Console.WriteLine("Conta 2");
+// Console.WriteLine($"Agência: {conta2.agencia}");
+// Console.WriteLine($"Conta: {conta2.conta}");
+// Console.WriteLine($"Saldo: {conta2.getSaldo()}");
+
+ContaCorrente cc = new ContaCorrente("123", "97765-2", 12200, "Eduardo Costa");
+
+Console.WriteLine(@$"
+    Correntista: {cc.correntista}
+    Agência: {cc.agencia}
+    Conta: {cc.conta}
+    Saldo Atual: {cc.getSaldo()}
+");
+
+
+
+

@@ -13,7 +13,23 @@ namespace BackEndProj.Classes
 
         public bool ValidarDataNascimento(string parDtNasc)
         {
-            throw new NotImplementedException();
+            DateTime dataConvertida;
+
+            if (DateTime.TryParse(parDtNasc, out dataConvertida))
+            {
+                Console.WriteLine($"Data Convertida: {dataConvertida}");
+                DateTime dataAtual = DateTime.Today;
+                Console.WriteLine($"Data Atual: {dataAtual}");
+                double anos = (dataAtual - dataConvertida).TotalDays / 365;
+                Console.WriteLine($"Anos Convertido: {anos}");
+
+                if (anos >= 18)
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
     }
 }
