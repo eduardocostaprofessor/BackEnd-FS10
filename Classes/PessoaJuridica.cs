@@ -12,6 +12,24 @@ namespace BackEndProj.Classes
         public string razaoSocial { get; set; }
         public string cnpj { get; set; }
 
+        // Para rendimentos até R$5.000,00- desconto de 6%
+        // Para rendimentos entre R$5.001,00 e R$10.000,00 - desconto de 8%
+        // Para rendimentos acima de R$10.000,01 - desconto de 10%
+        public override float PagarImposto(float parRendimento)
+        {
+            
+            if( parRendimento <= 5000) 
+            {
+                return parRendimento - (parRendimento / 100) * 6; //desconta 6% do rendimento
+            } 
+            else if ( parRendimento >= 5001 && parRendimento <= 10000 )
+            {
+                return parRendimento - (parRendimento / 100) * 8; // desconta 8% do rendimento
+            }
+            
+            return parRendimento - (parRendimento / 100) * 10; // desconta 10% do rendimento
+        }
+
         public bool ValidarCnpj(string parCnpj)
         {
             

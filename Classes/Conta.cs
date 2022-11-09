@@ -12,10 +12,10 @@ namespace BackEndProj.Classes
         private double saldo;
 
         //construtor padrão
-        // public Conta()
-        // {
+        public Conta()
+        {
 
-        // }
+        }
         // //construtor sobrecarga 1
         // public Conta(string parAgencia, string parConta)
         // {

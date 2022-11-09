@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace BackEndProj.Classes
 {
-    public class ContaPoupanca
+    public class ContaPoupanca : Conta
     {
         
     }
